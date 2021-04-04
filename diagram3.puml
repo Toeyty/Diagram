@@ -1,0 +1,17 @@
+@startuml
+User -> (Select the phone network)
+
+(Select the phone network) -> (Dial a phone number)
+
+(Dial a phone number) -> (Coin)
+
+(Coin) -> (finish)
+
+(Wrong choice) -up-|> (Select the phone network) #green;line.dashed;text:green : extends
+
+(Press the wrong number) -up-|> (Dial a phone number)#green;line.dashed;text:green : extends
+
+(Coins do not enter) -up-|> (Coin)#green;line.dashed;text:green : extends
+
+(Not enough money) -up-|> (Coin)#green;line.dashed;text:green : extends
+@enduml

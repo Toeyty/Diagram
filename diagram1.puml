@@ -1,0 +1,11 @@
+@startuml
+User -> (Coin)
+
+
+(Coin) -right-> (Washing machine)
+
+(Coins do not enter) -up-|> (Coin)#green;line.dashed;text:green : extends
+(Not enough money) -up-|> (Coin) #green;line.dashed;text:green : extends
+
+(Freezes) -left-|> (Washing machine) #green;line.dashed;text:green : extends
+@enduml

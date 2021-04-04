@@ -1,0 +1,23 @@
+@startuml
+left to right direction
+
+
+
+:customer: --> (menu)
+:customer: --> (Confirm)
+:customer: --> (Check bill)
+
+(Not enough money) --|> (Check bill) #green;line.dashed;text:green : extends
+(The drink runs out) --|> (menu) #green;line.dashed;text:green : extends
+(Wrong menu) --|> (Confirm) #green;line.dashed;text:green : extends
+
+left to right direction
+:sale: --> (menu)
+:sale: --> (Confirm)
+:sale: --> (Check bill)
+
+
+(customer).(Not enough money)
+(customer).(The drink runs out)
+(sale).(Wrong menu)
+@enduml
